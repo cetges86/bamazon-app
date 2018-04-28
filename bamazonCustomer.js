@@ -19,6 +19,7 @@ connection.connect(function (err) {
 const displayItems = () => {
     connection.query('SELECT * FROM products', function (err, res) {
         if (err) throw err;
+        console.log("Welcome to Bamazon. It's definitely not amazon.")
         console.log("Available Products for Sale");
         console.log("-----------------------")
         res.forEach(item => {
@@ -36,7 +37,7 @@ const displayItems = () => {
 const deductStock = (id, quantity) => {
     connection.query('UPDATE products SET stock_quantity = stock_quantity - ? WHERE item_id = ?',
         [quantity, id], function (err, res) {
-            console.log(`${quantity} deducted from stock!`)
+            console.log(`Thank you! Enjoy your purchase.`)
         }
 
     );

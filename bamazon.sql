@@ -18,5 +18,19 @@ VALUES ("Apple 15in Macbook Pro", "Computers", 1500, 2);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("God of War", "Video Games", 60, 10);
 
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Collectible Beer Mug", "Kitchen", 20, 50);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("The Fifth Element Blu Ray", "Movies", 25, 20);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Apple Dongle Variety Pack", "Stuff that you shouldn't have to buy", 120, 200);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Mortal Kombat Blu Ray", "Movies", 2, 50);
+
+
+
 
 
