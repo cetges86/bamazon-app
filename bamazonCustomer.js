@@ -34,10 +34,12 @@ const displayItems = () => {
     })
 }
 
+//deduct from stock, update db
 const deductStock = (id, quantity) => {
     connection.query('UPDATE products SET stock_quantity = stock_quantity - ? WHERE item_id = ?',
         [quantity, id], function (err, res) {
             console.log(`Thank you! Enjoy your purchase.`)
+            customer();
         }
 
     );
@@ -73,6 +75,6 @@ const customer = () => {
                 console.log(`Your total cost was $${total}`)
             }
         })
-        //deduct from stock, update db
+        
     })
 }
