@@ -65,18 +65,15 @@ const lowInven = () => {
 const addStock = (id, quantity) => {
     connection.query('UPDATE products SET stock_quantity = stock_quantity + ? WHERE item_id = ?',
         [quantity, id], function (err, res) {
-            console.log(`${quantity} added to stock of item #${res[0].product_name}!`)
+            console.log(`${quantity} added to stock of item #${id}!`)
             managerCLI();
         }
-
     );
-
-
 }
 
 //add new product
+
 const addNewItem = (item, department, price, quantity) => {
-    console.log(item,department,price,quantity);
 
     connection.query(`INSERT INTO products (product_name, department_name, price, stock_quantity)
     VALUES ("${item}","${department}", ${parseFloat(price)}, ${parseInt(quantity)})`, function (err, res) {
